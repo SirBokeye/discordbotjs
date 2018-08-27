@@ -51,7 +51,7 @@ bot.on("message", async message =>{
 
         let reportEmbed = new Discord.RichEmbed()
         .setDescription("Report")
-        .setColor()
+        .setColor(#42bff4)
         .addField("Reported User", `${rUser} met ID: ${rUser.id}`)
         .addField("Reported By", `${message.author} met ID: ${message.author.id}`)
         .addField("Channel", message.channel)
