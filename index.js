@@ -62,8 +62,16 @@ bot.on("message", async message =>{
         return message.channel.send("ZUIG EEN PIEMEL AARSLIKKER");
     }
     
-    if(cmd === `${prefix}Bixby`){
-        return message.channel.send("BIXBY");
+     if(cmd ===`${prefix}Bixby`){
+
+        let bicon = bot.user.displayAvatarURL;
+        let botembed = new Discord.RichEmbed()
+        .setDescription("BIXBY!")
+        .setColor("#42bff4")
+        .setThumbnail(bicon)
+        .addField("Bot Name", bot.user.username)
+
+        return message.channel.send(botembed);
     }
     
     if(cmd === `${prefix}BIXBY`){
