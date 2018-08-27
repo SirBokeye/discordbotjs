@@ -121,6 +121,36 @@ bot.on("message", async message =>{
 
         return message.channel.send(botembed);
     }
-});
 
+    if (message.content.startsWith(`${prefix}play`)) {
+
+        const voiceChannel = message.member.voiceChannel;
+        if (!voiceChannel) return message.channel.send(`Je moet in een channel zitten om muziek af te spelen!`);
+        const permissions = voiceChannel.permissionsFor(message.client.user);
+        if (!permissions.has(`CONNECT`)) {
+            return message.channel.send(`Ik kan niet in de voice channel komen!`);
+        }
+        if (!permissions.has(`SPEAK`)) {
+            return message.channel.send(`Ik kan geen muziek afspelen in deze channel`);
+        }
+        
+        try {
+            var connection = await voiceChannel.join();
+        } catch (error) {
+          console.error(`Ik kon niet in de voice channel komen ${error}`);
+          return message.channel.send(`Ik kon niet in de voice channel komen ${error}`);  
+        }
+
+        const dispachter = connection.playStream(ytdl(args[1]))
+            .on(`end`, () => {
+                console.log(`Muziek over!`);
+                voiceChannel.leave();
+            })
+            .on(`error`, error => {
+                console.error(error);
+            });
+        dispachter.setVolumeLogarithmic(5 / 5);   
+    }
+
+});
 bot.login(process.env.BOT_TOKEN);
