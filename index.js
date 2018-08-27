@@ -48,7 +48,7 @@ bot.on("message", async message =>{
     }
     
     if(cmd === `${prefix}Dumpert`){
-        return message.channel.send("DUMPERT REETEN");
+        return message.channel.send("DUMPERT REETEN!! http://www.dumpert.nl/");
     }
     
     if(cmd === `${prefix}HI`){
