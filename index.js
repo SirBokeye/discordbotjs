@@ -41,6 +41,26 @@ bot.on("message", async message =>{
     if(cmd === `${prefix}Hey`){
         return message.channel.send("Hey hoe is het!");
     }
+    
+    if(cmd === `${prefix}BIEM`){
+        return message.channel.send("WOW!");
+    }
+    
+    if(cmd === `${prefix}Dumpert`){
+        return message.channel.send("DUMPERT REETEN");
+    }
+    
+    if(cmd === `${prefix}HI`){
+        return message.channel.send("ELLO MY FRIEND");
+    }
+    
+    if(cmd === `${prefix}HOMO`){
+        return message.channel.send("ZUIG EEN PIEMEL AARSLIKKER");
+    }
+    
+    if(cmd === `${prefix}Homo`){
+        return message.channel.send("ZUIG EEN PIEMEL AARSLIKKER");
+    }
 
     if(cmd ===`${prefix}serverinfo`){
 
