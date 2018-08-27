@@ -61,6 +61,14 @@ bot.on("message", async message =>{
     if(cmd === `${prefix}Homo`){
         return message.channel.send("ZUIG EEN PIEMEL AARSLIKKER");
     }
+    
+    if(cmd === `${prefix}Bixby`){
+        return message.channel.send("BIXBY");
+    }
+    
+    if(cmd === `${prefix}BIXBY`){
+        return message.channel.send("BIXBY BIXBY BIXBY");
+    }
 
     if(cmd ===`${prefix}serverinfo`){
 
