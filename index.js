@@ -81,7 +81,19 @@ bot.on("message", async message =>{
      if(cmd === `${prefix}Dylan`){
         return message.channel.send(":japanese_goblin:");
     }
+    
+     if(cmd === `${prefix}Jappie`){
+        return message.channel.send(":beer:");
+    }
+   
+    if(cmd === `${prefix}Daan`){
+        return message.channel.send(":wolf:");
+    }
 
+    if(cmd === `${prefix}Jay`){
+        return message.channel.send(":monkey_face:");
+    }
+    
     if(cmd ===`${prefix}serverinfo`){
 
         let sicon = message.guild.iconURL;
