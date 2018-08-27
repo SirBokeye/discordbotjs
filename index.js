@@ -63,6 +63,10 @@ bot.on("message", async message =>{
         return message.channel.send("ZUIG EEN PIEMEL AARSLIKKER");
     }
     
+    if(cmd === `${prefix}P90`){
+        return message.channel.send(":P90:");
+    }
+    
      if(cmd ===`${prefix}Bixby`){
 
         let bicon = bot.user.displayAvatarURL;
