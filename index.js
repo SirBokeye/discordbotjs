@@ -1,6 +1,6 @@
 const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
-const Ytdl = require("ffmpeg.js");
+const Ytdl = require("js-ffmpeg");
 
 const bot = new Discord.Client({disableEveryone: true});
 
