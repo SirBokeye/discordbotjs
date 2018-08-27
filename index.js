@@ -42,26 +42,6 @@ bot.on("message", async message =>{
         return message.channel.send("Hey hoe is het!");
     }
 
-
-    if(cmd === `${prefix}report`){
-
-        let rUser = message.guild.member(message.mentions.user.first() || message.guild.members.get(args[0]));
-        if(!rUser) return message.channel.send("Kan het ventje niet vinden.");
-        let reason = args.join(" ").slice(22);
-
-        let reportEmbed = new Discord.RichEmbed()
-        .setDescription("Report")
-        .setColor(#42bff4)
-        .addField("Reported User", `${rUser} met ID: ${rUser.id}`)
-        .addField("Reported By", `${message.author} met ID: ${message.author.id}`)
-        .addField("Channel", message.channel)
-        .addField("Tijd", message.createdAt)
-        .addField("Reden", reason);
-
-        message.channel.send(reportEmbed);
-        return;
-    }
-
     if(cmd ===`${prefix}serverinfo`){
 
         let sicon = message.guild.iconURL;
