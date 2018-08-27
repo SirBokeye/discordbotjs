@@ -69,6 +69,10 @@ bot.on("message", async message =>{
     if(cmd === `${prefix}BIXBY`){
         return message.channel.send("BIXBY BIXBY BIXBY");
     }
+    
+     if(cmd === `${prefix}Dylan`){
+        return message.channel.send(":japanese_goblin");
+    }
 
     if(cmd ===`${prefix}serverinfo`){
 
