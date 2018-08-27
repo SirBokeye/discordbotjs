@@ -137,7 +137,10 @@ bot.on("message", async message =>{
         
         try {
             var connection = await voiceChannel.join();
-        } 
+        } catch (error) {
+          console.error(`Ik kon niet in de voice channel komen ${error}`);
+          return message.channel.send(`Ik kon niet in de voice channel komen ${error}`);  
+        }
 
         const dispachter = connection.playStream(ytdl(args[1]))
             .on(`end`, () => {
