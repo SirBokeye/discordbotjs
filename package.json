@@ -11,6 +11,10 @@
   "dependencies": {
     "discord.js": "^11.4.2",
     "request": "2.81.0"
-    "ffmpeg: 3.6"
+    "ffmpeg-binaries": "^3.2.2-3",
+    "node-opus": "^0.2.7",
+    "string-format": "^0.5.0",
+    "url-parse": "^1.2.0",
+    "ytdl-core": "^0.20.2"
   }
 }
