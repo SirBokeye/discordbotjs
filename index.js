@@ -71,7 +71,7 @@ bot.on("message", async message =>{
     }
     
      if(cmd === `${prefix}Dylan`){
-        return message.channel.send(":japanese_goblin");
+        return message.channel.send(":japanese_goblin":);
     }
 
     if(cmd ===`${prefix}serverinfo`){
