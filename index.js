@@ -87,7 +87,11 @@ bot.on("message", async message =>{
         return message.channel.send(":bear:");
     }
     
-     if(cmd === `${prefix}Jappie & ${prefix}jappie`){
+     if(cmd === `${prefix}Jappie`){
+        return message.channel.send(":beer:");
+    }
+    
+    if(cmd === `${prefix}jappie`){
         return message.channel.send(":beer:");
     }
     
