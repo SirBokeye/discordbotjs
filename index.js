@@ -90,6 +90,10 @@ bot.on("message", async message =>{
      if(cmd === `${prefix}Jappie`){
         return message.channel.send(":beer:");
     }
+    
+    if(cmd === `${prefix}jappie`){
+        return message.channel.send(":beer:");
+    }
    
     if(cmd === `${prefix}Daan`){
         return message.channel.send(":wolf:");
